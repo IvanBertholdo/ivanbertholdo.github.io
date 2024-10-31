@@ -136,7 +136,7 @@
 
         #tratamentos, #atendimento {
             text-align: center;
-            padding: 40px;
+            padding: 15px;
             background-color: var(--cor-bg-sec);
         }
 
@@ -150,7 +150,7 @@
             max-width: 100%; /* A imagem ocupa no máximo a largura do container */
             height: auto; /* Mantém a proporção da imagem */
             display: block;
-            margin: 20px auto; /* Centraliza a imagem */
+            margin: 24px auto; /* Centraliza a imagem */
         }
 
         #atendimento h2 {
@@ -286,7 +286,8 @@
                 grid-template-columns: 1fr;
             }
             .imagem-tratamentos {
-                width: 90%; /* Reduz a largura da imagem em telas pequenas */
+                max-width: 100%; /* Reduz a largura da imagem em telas pequenas */
+                height: auto;
             }
             #contatos .contato-container {
                 flex-direction: column;
@@ -336,10 +337,8 @@
 
     <!-- Seção de Tratamentos -->
     <section id="tratamentos">
-        <div class="tratamentos">
             <h2>Tratamentos</h2>
             <img class="imagem-tratamentos" src="tratamentos.jpeg" alt="Tratamentos" />
-        </div>
         <div>
         </div>
         <div><a href="https://wa.me/5533999727662?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
