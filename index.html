@@ -91,7 +91,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('Laura.png');
+            background-image: url('lauraMenor.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -169,9 +169,25 @@
             background-color: var(--cor-acento);
             color: #fff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             border-radius: 5px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .quadro strong {
+            margin-bottom: 10px; /* Adiciona um espaço entre o título e o texto */
+        }
+
+        .quadro ul {
+            padding-left: 20px; /* Adiciona espaço para a lista no segundo quadro */
+            list-style-type: disc;
+        }
+
+        .quadro ul li {
+            margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
         }
 
         #contatos {
@@ -196,6 +212,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         .link-sem-sublinhar {
@@ -285,6 +302,26 @@
             .quadro-container {
                 grid-template-columns: 1fr;
             }
+            .quadro-container .quadro {
+                padding: 25px;
+                font-size: 4vw; /* Aumenta o tamanho do texto */
+                line-height: 1.6; /* Melhora o espaçamento entre as linhas */
+                height: auto;
+                width: 90%;
+                margin: 10px auto;
+                text-align: center;
+            }
+            .quadro {
+                padding: 15px; /* Reduz o padding em dispositivos móveis */
+                text-align: center; /* Alinha o texto à esquerda para facilitar a leitura */
+                font-size: 2vh;
+            }
+            .quadro ul {
+                padding-left: 15px; /* Reduz o padding da lista em telas menores */
+            }
+            #atendimento h2 {
+                font-size: 5vw; /* Ajusta o tamanho do título em dispositivos móveis */
+            }
             .imagem-tratamentos {
                 max-width: 100%; /* Reduz a largura da imagem em telas pequenas */
                 height: auto;
@@ -296,10 +333,35 @@
 
             #agendar-consulta {
                 font-size: 4vw;
+                padding: 8px 15px;
             }
 
             .foto-doutora img {
                 width: 120px;
+            }
+
+            #tratamentos h2 {
+                font-size: 6vw; /* Tamanho do texto para telas menores */
+                margin: 10px 0; /* Margem superior e inferior */
+            }
+
+            /* Estilo para os textos dentro da seção de contatos */
+            #contatos h3 {
+                font-size: 5vw; /* Tamanho do texto para telas menores */
+                margin: 5px 0; /* Margem para espaçar os títulos */
+            }
+
+            #contatos p {
+                font-size: 4vw; /* Tamanho do texto para telas menores */
+                margin: 5px 0; /* Margem para espaçar os parágrafos */
+            }
+
+            /* Certifique-se de que todos os textos nas seções sejam responsivos */
+            #tratamentos h2, 
+            #contatos h3, 
+            #contatos p {
+                text-align: center; /* Centraliza os textos */
+                margin: 5px 0; /* Margem uniforme para espaçamento */
             }
         }
     </style>
@@ -311,7 +373,9 @@
         <!-- Metade esquerda -->
         <div class="metade-esquerda">
             <div class="conteudo-texto">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis sapien nibh. Maecenas porttitor libero nec arcu egestas, vel placerat augue sagittis. Donec cursus sem id ipsum eleifend faucibus. Quisque vitae massa sed nisl fringilla lobortis. Nam eget felis id arcu imperdiet elementum ac in turpis. Nunc tristique odio lectus, vel egestas diam porttitor tristique. Nulla vitae condimentum nisl. Quisque dapibus feugiat enim eu feugiat. Nulla aliquam feugiat metus non lobortis. Integer facilisis scelerisque convallis. Curabitur sit amet scelerisque lacus, sit amet mattis eros. Aliquam eget justo auctor arcu lobortis elementum sed id orci.</h1>
+                <h1>“A arte de cuidar de almas”
+                    Com um olhar atento e acolhedor, estou aqui para oferecer a você a orientação e apoio que você precisa para te ajudar a encontrar o equilíbrio e saúde mental. Assim como um jardim precisa de cuidados para florescer, nossa mente também precisa de atenção para crescer de forma saudável. Experimente um atendimento personalizado e humanizado, projetado para iluminar seu caminho para o bem estar.
+                    Vamos começar juntos? </h1>
                 <a href="https://wa.me/5533999727662?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a>
             </div>
         </div>
@@ -327,10 +391,12 @@
             <h4>Sobre</h4>
             <h3>Dra. Laura Ambrósio</h3>
             <p>Sejam bem-vindos!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+            <p>Meu compromisso é entender cada paciente de forma integral, com um olhar que vai além dos sintomas ou diagnósticos, buscando um cuidado leve e um tratamento adequado que promovam qualidade de vida.
+
+                Acredito no poder do cuidado, do autoconhecimento e do fortalecimento das conexões como fontes de sentido e bem-estar para cada pessoa.</p>
         </div>
         <div class="foto-doutora">
-            <img src="Laura.png" alt="Dra. Laura" />
+            <img src="Laura1.jpg" alt="Dra. Laura" />
         </div>
         <div><a href="https://wa.me/5533999727662?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
     </section>
@@ -338,7 +404,7 @@
     <!-- Seção de Tratamentos -->
     <section id="tratamentos">
             <h2>Tratamentos</h2>
-            <img class="imagem-tratamentos" src="tratamentos.jpeg" alt="Tratamentos" />
+            <img class="imagem-tratamentos" src="lauraatendimentos.png" alt="Tratamentos" />
         <div>
         </div>
         <div><a href="https://wa.me/5533999727662?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
@@ -348,12 +414,31 @@
     <section id="atendimento">
         <h2>Como Funciona o Atendimento?</h2>
         <div class="quadro-container">
-            <div class="quadro">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
-            <div class="quadro">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
-            <div class="quadro">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
-            <div class="quadro">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+            <div class="quadro">
+                <strong>Consulta presencial e online:</strong><br>
+                Ofereço uma avaliação detalhada e minuciosa, totalmente focada nas necessidades e expectativas de cada paciente, com o objetivo de desenvolver um plano de tratamento personalizado.
+            </div>
+            
+            <div class="quadro">
+                <strong>Acompanhamento personalizado:</strong><br>
+                <ul>
+                    <li><strong>Suporte integral:</strong> Proporciono suporte completo à saúde mental, reconhecendo cada pessoa como um indivíduo único, com suas próprias experiências e particularidades que merecem ser valorizadas e compreendidas para um cuidado integral e personalizado.</li>
+                    <li><strong>Apoio contínuo no processo terapêutico:</strong> Estarei ao seu lado ao longo de toda a jornada terapêutica, sempre disponível para garantir que você se sinta seguro e acolhido.</li>
+                </ul>
+            </div>
+            
+            <div class="quadro">
+                <strong>Prescrição de medicamentos:</strong><br>
+                Quando necessário e sempre fundamentada em evidências científicas atualizadas.
+            </div>
+            
+            <div class="quadro">
+                <strong>Solicitação de exames:</strong><br>
+                Realizada de forma individualizada, apenas quando necessário, considerando a necessidade específica de cada paciente.
+            </div>
         </div>
-        <a href="https://wa.me/5533999727662?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a> <!-- Botão de agendar consulta -->
+        
+        <a href="https://wa.me/5533999727662?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os" target="_blank" id="agendar-consulta">Agendar Consulta</a> <!-- Botão de agendar consulta -->
     </section>
 
     <!-- Seção de Contatos -->
@@ -362,7 +447,7 @@
             <div class="contato">
                 <img class="img-branca" src="icons/envelope.png" alt="E-mail" />
                 <h3>Email</h3>
-                <p>contato@exemplo.com</p>
+                <p>dralauraambrosio@gmail.com</p>
             </div>
             <div class="contato">
                 <a href="https://wa.me/5533999988580?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank">
@@ -380,7 +465,8 @@
             </div>
             <div class="contato">
                 <img class="img-branca" src="icons/marcador.png" alt="Marcador" />
-                <h3>Endereço</h3>
+                <h3>Atendimento Presencial</h3>
+                <h3>Dom Cavati</h3>
                 <p>Rua Exemplo, 123 - Bairro - Cidade</p>
             </div>
             <div class="contato">
