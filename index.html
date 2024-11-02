@@ -10,7 +10,7 @@
         :root {
             --cor-bg: #ecece4;
             --cor-acento: #546454;
-            --cor-bg-sec: #d4d4bc;
+            --cor-bg-sec: #d0d1be;
             --cor-primaria: #dcd4c4;
         }
 
@@ -34,6 +34,7 @@
             flex-wrap: wrap;
             height: 100vh;
             margin: 10vh;
+            margin-top: 0;
         }
 
         .conteudo-texto h1 {
@@ -225,6 +226,17 @@
             filter: invert(1);
         }
 
+        .logo-container {
+            text-align: center; /* Centraliza a imagem */
+            margin: 20px 0; /* Adiciona margem acima e abaixo da logo */
+        }
+
+        .logo {
+            max-width: 100%; /* A imagem ocupa no máximo a largura do container */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+
         /* Responsividade */
         @media (max-width: 1024px) {
             #inicio {
@@ -264,6 +276,7 @@
         @media (max-width: 768px) {
             #inicio {
                 padding: 5vh;
+                padding-top: 0;
                 flex-direction: column; /* Coluna no mobile */
                 margin: 0; /* Remove a margem para evitar qualquer sobreposição */
             }
@@ -369,10 +382,19 @@
                 text-align: center; /* Centraliza os textos */
                 margin: 5px 0; /* Margem uniforme para espaçamento */
             }
+
+            .logo {
+                width: 80%; /* Pode ser ainda menor em telas muito pequenas */
+            }
         }
     </style>
 </head>
 <body>
+
+            <!-- Logo no topo do site -->
+            <div class="logo-container">
+                <img src="logoComNomeMenorAtual.jpg" alt="Logo" class="logo">
+            </div>
 
     <!-- Seção Inicial -->
     <section id="inicio">
@@ -421,25 +443,25 @@
         <h2>Como Funciona o Atendimento?</h2>
         <div class="quadro-container">
             <div class="quadro">
-                <strong>Consulta presencial e online:</strong><br>
+                <strong style="color: #efdb96;">Consulta presencial e online:</strong><br>
                 Ofereço uma avaliação detalhada e minuciosa, totalmente focada nas necessidades e expectativas de cada paciente, com o objetivo de desenvolver um plano de tratamento personalizado.
             </div>
             
             <div class="quadro">
-                <strong>Acompanhamento personalizado:</strong><br>
+                <strong style="color: #efdb96;">Acompanhamento personalizado:</strong><br>
                 <ul>
-                    <li><strong>Suporte integral:</strong> Proporciono suporte completo à saúde mental, reconhecendo cada pessoa como um indivíduo único, com suas próprias experiências e particularidades que merecem ser valorizadas e compreendidas para um cuidado integral e personalizado.</li>
-                    <li><strong>Apoio contínuo no processo terapêutico:</strong> Estarei ao seu lado ao longo de toda a jornada terapêutica, sempre disponível para garantir que você se sinta seguro e acolhido.</li>
+                    <li><strong style="color: #efdb96;">Suporte integral:</strong> Proporciono suporte completo à saúde mental, reconhecendo cada pessoa como um indivíduo único, com suas próprias experiências e particularidades que merecem ser valorizadas e compreendidas para um cuidado integral e personalizado.</li>
+                    <li><strong style="color: #efdb96;">Apoio contínuo no processo terapêutico:</strong> Estarei ao seu lado ao longo de toda a jornada terapêutica, sempre disponível para garantir que você se sinta seguro e acolhido.</li>
                 </ul>
             </div>
             
             <div class="quadro">
-                <strong>Prescrição de medicamentos:</strong><br>
+                <strong style="color: #efdb96;">Prescrição de medicamentos:</strong><br>
                 Quando necessário e sempre fundamentada em evidências científicas atualizadas.
             </div>
             
             <div class="quadro">
-                <strong>Solicitação de exames:</strong><br>
+                <strong style="color: #efdb96;">Solicitação de exames:</strong><br>
                 Realizada de forma individualizada, apenas quando necessário, considerando a necessidade específica de cada paciente.
             </div>
         </div>
@@ -451,13 +473,13 @@
     <section id="contatos">
         <div class="contato-container">
             <div class="contato">
-                <img class="img-branca" src="icons/envelope.png" alt="E-mail" />
+                <img class="img" src="icons/envelope.svg" alt="E-mail" />
                 <h3>Email</h3>
                 <p>dralauraambrosio@gmail.com</p>
             </div>
             <div class="contato">
                 <a href="https://wa.me/5533999988580?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank">
-                    <img class="img-branca" src="icons/whatsapp.png" alt="WhatsApp" />
+                    <img class="img" src="icons/whatsapp.svg" alt="WhatsApp" />
                 </a>
                 <h3>
                     <a href="https://wa.me/5533999988580?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
@@ -470,13 +492,13 @@
                         </p>
             </div>
             <div class="contato">
-                <img class="img-branca" src="icons/marcador.png" alt="Marcador" />
+                <img class="img" src="icons/marcador.svg" alt="Marcador" />
                 <h3>Atendimento Presencial</h3>
                 <h3>Dom Cavati</h3>
                 <p>Rua Exemplo, 123 - Bairro - Cidade</p>
             </div>
             <div class="contato">
-                <img class="img-branca" src="icons/instagram.png" alt="instagram" />
+                <img class="img" src="icons/instagram.svg" alt="instagram" />
                 <h3>Redes Sociais</h3>
                 <p>@dralaambrosio</p>
             </div>
