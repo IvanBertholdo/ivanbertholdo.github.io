@@ -229,11 +229,58 @@
         .logo-container {
             text-align: center; /* Centraliza a imagem */
             margin: 20px 0; /* Adiciona margem acima e abaixo da logo */
+            flex: 1;
         }
 
         .logo {
             max-width: 100%; /* A imagem ocupa no máximo a largura do container */
             height: auto; /* Mantém a proporção da imagem */
+        }
+
+        /* Seção que ocupa a tela inteira */
+        .header-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            text-align: center; /* Centraliza a imagem */
+            margin: 20px 0; /* Adiciona margem acima e abaixo da logo */
+            flex: 1;
+            justify-content: center;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--cor-acento);
+            font-size: 1.5vw;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            color: #4a6b4a;
+        }
+
+        /* Ícone de hambúrguer */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            flex: 0.5;
+            text-align: center;
         }
 
 
@@ -274,6 +321,43 @@
         }
 
         @media (max-width: 768px) {
+            .header-container {
+                padding: 0 5vh;
+            }
+            .menu {
+                display: none; /* Oculta o menu padrão em telas menores */
+                position: absolute;
+                top: 0; /* Abaixo do cabeçalho */
+                right: 5vw;
+                background-color: var(--cor-bg-sec);
+                width: 20vh;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                z-index: 1000;
+            }
+    
+            .menu ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+                background-color: var(--cor-bg-sec);
+            }
+
+            .menu a {
+                font-size: 2vh; /* Aumenta o tamanho das letras em telas menores */
+                color: var(--cor-acento);
+            }
+
+            .hamburger {
+                display: block; /* Mostra o ícone de hambúrguer em telas menores */
+                position: relative;
+            }
+
+            .menu.active {
+                display: flex; /* Mostra o menu quando ativado */
+            }
+    
             #inicio {
                 padding: 5vh;
                 padding-top: 0;
@@ -384,16 +468,33 @@
             }
 
             .logo {
-                width: 80%; /* Pode ser ainda menor em telas muito pequenas */
+                width: 100%; /* Pode ser ainda menor em telas muito pequenas */
             }
         }
     </style>
 </head>
 <body>
-            <!-- Logo no topo do site -->
-            <div class="logo-container">
-                <img src="logoComNomeMenorAtual.jpg" alt="Logo" class="logo">
-            </div>
+<div class="header-container">
+    <!-- Logo no topo do site -->
+    <div class="logo-container">
+        <img src="logoComNomeMenorAtual.jpg" alt="Logo" class="logo">
+    </div>
+
+        <!-- Ícone de hambúrguer para telas menores -->
+    <div>
+        <img src="icons/menu-hamburguer.svg" alt="Menu hambúrguer" onclick="toggleMenu()" class="hamburger">
+    </div> 
+
+    <!-- Menu de navegação -->
+    <nav class="menu">
+    <ul>
+        <li><a href="#boas-vindas" onclick="toggleMenu()">Boas-Vindas</a></li>
+        <li><a href="#tratamentos" onclick="toggleMenu()">Tratamentos</a></li>
+        <li><a href="#atendimento" onclick="toggleMenu()">Atendimento</a></li>
+        <li><a href="#contatos" onclick="toggleMenu()">Contato</a></li>
+    </ul>
+    </nav>
+</div>
 
     <!-- Seção Inicial -->
     <section id="inicio">
@@ -503,5 +604,22 @@
             </div>
         </div>
     </section>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active'); // Alterna a classe 'active'
+        }
+        
+        // Fecha o menu se clicar fora dele
+        document.addEventListener("click", function (event) {
+            const menu = document.querySelector('.menu');
+            const hamburger = document.querySelector('.hamburger');
+        
+            // Verifica se o clique foi fora do menu e do hambúrguer
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active'); // Remove a classe 'active'
+            }
+        });
+        </script>
 </body>
 </html>
