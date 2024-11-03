@@ -32,20 +32,20 @@
         #inicio {
             display: flex;
             flex-wrap: wrap;
-            height: 100vh;
+            height: auto;
             margin: 10vh;
             margin-top: 0;
         }
 
         .conteudo-texto h1 {
-            padding: 5vh;
+            padding: 2vh;
         }
 
         /* Estilo do texto */
         .conteudo-texto h1, .conteudo-texto h2 {
-            font-size: 1.5vw;
+            font-size: 2.5vw;
             margin: 10px 0;
-            color: var(--cor-bg);   
+            color: var(--cor-bg); 
         }
 
         .conteudo-texto p {
@@ -57,7 +57,7 @@
         .metade-esquerda {
             position: relative;
             flex: 1;
-            background-image: url('logo.jpg');
+            background-image: url('logoFundo.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -65,18 +65,7 @@
             justify-content: center;
             color: var(--cor-bg);
             text-align: center;
-        }
-
-        /* Sobreposição para deixar a imagem mais transparente */
-        .metade-esquerda::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.1); /* Ajuste a cor e opacidade aqui */
-            z-index: 1;
+            border-radius: 2%;
         }
 
         .conteudo-texto {
@@ -95,6 +84,7 @@
             background-image: url('LauraMenor.jpg');
             background-size: cover;
             background-position: center;
+            border-radius: 2%;
         }
 
         #boas-vindas {
@@ -128,7 +118,7 @@
             text-decoration: none; /* Remove o sublinhado padrão */
             border-radius: 5px;
             cursor: pointer;
-            margin: 1vh;
+            margin: 3vh;
         }
 
         #agendar-consulta:hover {
@@ -372,23 +362,18 @@
 
             .metade-esquerda, .metade-direita {
                 width: 100%;
-                height: 50vh; /* 50% da altura da tela para cada */
+                height: auto; /* 50% da altura da tela para cada */
                 min-height: 300px; /* Altura mínima para garantir visibilidade */
                 flex: none; /* Remove qualquer flexibilidade para garantir proporções */
             }
             
             .conteudo-texto {
-                padding: 20px; /* Adiciona espaçamento interno */
                 text-align: center; /* Centraliza o texto e o botão */
             }
 
             .conteudo-texto h1 {
-                font-size: 3vw;
-            }
-
-            .conteudo-texto #agendar-consulta {
-                margin-top: -3vh;
-            }
+                font-size: 4vw;
+            }        
 
             .texto-boas-vindas h2 {
                 font-size: 6vw; /* Tamanho maior e fixo para o subtítulo */
@@ -509,7 +494,7 @@
                 <h1>“A arte de cuidar de almas”
                     Com um olhar atento e acolhedor, estou aqui para oferecer a você a orientação e apoio que você precisa para te ajudar a encontrar o equilíbrio e saúde mental. Assim como um jardim precisa de cuidados para florescer, nossa mente também precisa de atenção para crescer de forma saudável. Experimente um atendimento personalizado e humanizado, projetado para iluminar seu caminho para o bem estar.
                     Vamos começar juntos? </h1>
-                <a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a>
+                <a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."  target="_blank" id="agendar-consulta">Agendar Consulta</a>
             </div>
         </div>
 
@@ -531,7 +516,7 @@
         <div class="foto-doutora">
             <img src="Laura1.jpg" alt="Dra. Laura" />
         </div>
-        <div><a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
+        <div><a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
     </section>
 
     <!-- Seção de Tratamentos -->
@@ -540,7 +525,7 @@
             <img class="imagem-tratamentos" src="lauraatendimentos.png" alt="Tratamentos" />
         <div>
         </div>
-        <div><a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os"  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
+        <div><a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."  target="_blank" id="agendar-consulta">Agendar Consulta</a></div>
     </section>
 
     <!-- Seção de Atendimento -->
@@ -571,7 +556,7 @@
             </div>
         </div>
         
-        <a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os" target="_blank" id="agendar-consulta">Agendar Consulta</a> <!-- Botão de agendar consulta -->
+        <a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" id="agendar-consulta">Agendar Consulta</a> <!-- Botão de agendar consulta -->
     </section>
 
     <!-- Seção de Contatos -->
@@ -583,16 +568,31 @@
                 <p><a href="mailto:dralauraambrosio@gmail.com" class="link-sem-sublinhar">dralauraambrosio@gmail.com</a></p>
             </div>
             <div class="contato">
-                <a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank">
+                <a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank">
                     <img class="img" src="icons/whatsapp.svg" alt="WhatsApp" />
                 </a>
                 <h3>
-                    <a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
+                    <a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
 
-                        Telefone</a></h3>
+                        Telefones</a></h3>
                         <p>
-                            <a href="https://wa.me/5533988758738?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
-                                (33) 9 8875-8738
+                            <a href="https://wa.me/5533998359632?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
+                                Contato Profissional: (33) 98875-8738
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://wa.me/5531975473030?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
+                                Cognitiva Canaã: (31) 97547-3030
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://wa.me/553136176800?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
+                                Cognitiva Horto: (31) 3617-6800
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://wa.me/553136172570?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
+                                Cognitiva Cariru: (31) 3617-2570
                             </a>
                         </p>
             </div>
@@ -600,7 +600,12 @@
                 <img class="img" src="icons/marcador.svg" alt="Marcador" />
                 <h3>Atendimento Presencial</h3>
                 <h3>Dom Cavati</h3>
-                <p>Rua Exemplo, 123 - Bairro - Cidade</p>
+                <p>Rua Campos Sales, 207</p>
+                <p>
+                    <a href="https://wa.me/5533999067648?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os." target="_blank" class="link-sem-sublinhar">
+                        (33)99906-7648
+                    </a>    
+                </p>
             </div>
             <div class="contato">
                 <img class="img" src="icons/instagram.svg" alt="instagram" />
