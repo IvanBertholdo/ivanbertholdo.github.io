@@ -52,7 +52,7 @@
         .metade-esquerda {
             position: relative;
             flex: 1;
-            background-image: url('logoFundo.jpg');
+            background-image: url('texturaLogo.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -143,7 +143,7 @@
         }
 
         .quadro {
-            height: 30vh;
+            height: auto;
             background-color: var(--cor-acento);
             color: #ecece4;
             display: flex;
@@ -152,7 +152,7 @@
             align-items: center;
             border-radius: 5px;
             padding: 20px;
-            text-align: left;
+            font-size: 2vh;
         }
 
         .quadro strong {
@@ -262,6 +262,24 @@
 
 
         /* Responsividade */
+
+        @media (min-width: 2000px) {
+            .conteudo-texto h1, .conteudo-texto p {
+                font-size: 2.1vw;
+            }
+
+            #inicio {
+                height: auto;
+                margin: 0;
+            }
+
+            .metade-direita {
+                width: 100%;
+                height: 120vh;
+                min-height: 300px;
+            }
+        }
+        
         @media (max-width: 1024px) {
             #inicio {
                 flex-direction: column;
