@@ -199,10 +199,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let message = '';
         if (correctCount === colors.length) {
-            message = "Parabéns! Você acertou a combinação de cores e posições!";
-            confirmGuessBtn.disabled = true;
+            message = "Parabéns! Você acertou a combinação!";
+            confirmGuessBtn.textContent = "Jogar Novamente";
+            confirmGuessBtn.removeEventListener('click', checkGuess); // Remove o listener antigo
+            confirmGuessBtn.addEventListener('click', resetGame); // Adiciona o novo listener
+        } else if (correctCount === 0) {
+            message = `Nenhum acerto`;
+        } else if (correctCount === 1) {
+            message = `${correctCount} acerto`;
         } else {
-            message = `Você acertou ${correctCount} garrafa(s) na posição correta.`;
+            message = `${correctCount} acertos`;
         }
 
         showModal(message);
@@ -215,6 +221,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeModal() {
         resultModal.style.display = 'none';
+    }
+
+    // --- Nova Função: Resetar o Jogo ---
+    function resetGame() {
+        closeModal(); // Fecha o modal, se estiver aberto
+        generateSecretCombination(); // Gera uma nova combinação secreta
+        createInitialBottles(); // Recria as garrafas na área de jogo (embaralhadas)
+        
+        // Redefine o botão para seu estado original
+        confirmGuessBtn.textContent = "Confirmar Palpite";
+        confirmGuessBtn.disabled = false; // Habilita o botão
+        confirmGuessBtn.removeEventListener('click', resetGame); // Remove o listener de reset
+        confirmGuessBtn.addEventListener('click', checkGuess); // Adiciona o listener de checagem novamente
     }
 
     // Início do Jogo
