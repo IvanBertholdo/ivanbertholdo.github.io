@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Up! - Tradicional</title>
+    <link rel="stylesheet" href="style_tradicional.css">
+</head>
+<body>
+    <nav class="game-modes">
+        <a href="../Normal/index.html" class="mode-link">N4mb4r</a>
+        <a href="tradicional.html" class="mode-link active">Tradicional</a>
+        <a href="../Garrafas/garrafas.html" class="mode-link">Garrafas</a>
+    </nav>
+    
+    <header>
+        <h1>Tradicional</h1>
+    </header>
+
+    <main>
+        <div id="game-container">
+            <div id="guess-grid">
+                </div>
+            <div id="input-row">
+                <input type="text" maxlength="1" class="guess-input" data-index="0">
+                <input type="text" maxlength="1" class="guess-input" data-index="1">
+                <input type="text" maxlength="1" class="guess-input" data-index="2">
+                <input type="text" maxlength="1" class="guess-input" data-index="3">
+            </div>
+            <p id="message"></p>
+        </div>
+    </main>
+
+    <script src="script_tradicional.js"></script>
+</body>
+</html>

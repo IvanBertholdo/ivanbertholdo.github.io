@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Up! - Garrafas!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="game-modes">
+        <a href="../Normal/index.html" class="mode-link">N4mb4r</a>
+        <a href="../Tradicional/tradicional.html" class="mode-link">Tradicional</a>
+        <a href="garrafas.html" class="mode-link active">Garrafas</a>
+    </nav>
+
+    <header>
+        <h1>Garrafas</h1>
+    </header>
+
+    <main>
+        <div id="game-container">
+            <h2 class="game-subtitle">Modo Garrafas: Reorganize as cores!</h2>
+            
+            <div id="bottle-play-area">
+                </div>
+
+            <button id="confirm-guess-btn">Confirmar Palpite</button>
+
+            <div id="result-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3 id="modal-title">Resultado do Palpite</h3>
+                    <p id="modal-message"></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</body>
+</html>

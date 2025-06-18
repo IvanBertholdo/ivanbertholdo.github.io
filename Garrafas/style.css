@@ -1,0 +1,247 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    position: relative; /* Necessário para posicionar a navegação */
+}
+
+.game-modes {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px; /* Espaço entre os links */
+}
+
+.mode-link {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mode-link:hover {
+    background-color: #e0e0e0;
+}
+
+.mode-link.active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #0056b3;
+    text-align: center;
+}
+
+#guess-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaço entre as linhas de palpites */
+    margin-bottom: 20px;
+    width: 100%;
+    align-items: center; /* Centraliza as linhas de palpite */
+}
+
+.guess-row {
+    display: flex;
+    gap: 10px; /* Espaço entre as caixas de texto */
+}
+
+.guess-input {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5em;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white; /* Fundo branco padrão */
+    transition: background-color 0.3s ease; /* Transição suave de cor */
+    outline: none; /* Remove o contorno ao focar */
+}
+
+.guess-input:focus {
+    border-color: #007bff;
+}
+
+/* Cores das caixas */
+.green {
+    background-color: #a8e6cf; /* Verde claro */
+    border-color: #28a745; /* Verde mais escuro */
+}
+
+.yellow {
+    background-color: #ffd3b5; /* Amarelo claro */
+    border-color: #ffc107; /* Amarelo mais escuro */
+}
+
+.red {
+    background-color: #ff9a9a; /* Vermelho claro */
+    border-color: #dc3545; /* Vermelho mais escuro */
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#game-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 850px; /* Aumentado para acomodar 8 garrafas */
+}
+
+.game-subtitle {
+    margin-top: 0;
+    color: #0056b3;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+#bottle-play-area {
+    display: flex;
+    flex-wrap: nowrap; /* Permite que as garrafas quebrem linha se a tela for pequena */
+    gap: 15px; /* Espaçamento entre as garrafas */
+    justify-content: center; /* Centraliza as garrafas na área */
+    padding: 20px;
+    min-height: 180px; /* Altura mínima para a área de jogo */
+    border: 2px dashed #ccc; /* Borda para demarcar a área */
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+    margin-bottom: 25px;
+}
+
+.bottle-item {
+    cursor: grab; /* Indica que o elemento é arrastável */
+    width: 70px; /* Largura da garrafa (ajuste conforme o SVG) */
+    height: 120px; /* Altura da garrafa (ajuste conforme o SVG) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; /* Fundo para garrafa antes de ter cor */
+    transition: transform 0.1s ease; /* Transição suave para o arrastar */
+}
+
+.bottle-item svg {
+    width: 80%; /* Ajusta o tamanho do SVG dentro do container */
+    height: 80%;
+    /* Removendo a cor de preenchimento padrão aqui, ela será definida via JS */
+    /* Isso garante que a cor do JS seja a única fonte */
+    /* Exemplo: fill="var(--bottle-color, #D3D3D3)" */
+}
+
+/* Estado de arrasto */
+.bottle-item.dragging {
+    opacity: 0.7;
+    transform: scale(1.05);
+    z-index: 1000; /* Garante que a garrafa arrastada fique acima de outras */
+}
+
+
+#confirm-guess-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#confirm-guess-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para o Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica por cima de tudo */
+    z-index: 1; /* Fica no topo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgba(0,0,0,0.4); /* Fundo preto semi-transparente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%; /* Largura do modal */
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close-button {
+    color: #aaa;
+    float: right; /* Alinha o 'x' à direita */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-title {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+#modal-message {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* ... seus estilos existentes ... */
+
+.sortable-ghost {
+    opacity: 0.2; /* Torna o item arrastado semi-transparente */
+    border: 2px dashed #007bff; /* Adiciona uma borda tracejada ao "fantasma" */
+    background-color: #e0f2f7; /* Cor de fundo para o espaço que o item ocupa */
+}

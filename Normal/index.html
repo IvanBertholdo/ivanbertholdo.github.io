@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Up! - N4mb4r</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="game-modes">
+        <a href="index.html" class="mode-link active">N4mb4r</a>
+        <a href="../Tradicional/tradicional.html" class="mode-link">Tradicional</a>
+        <a href="../Garrafas/garrafas.html" class="mode-link">Garrafas</a>
+    </nav>
+
+    <header>
+        <h1>N4mb4r</h1>
+    </header>
+
+    <main>
+        <div id="game-container">
+            <div id="guess-grid">
+                </div>
+            <div id="input-row">
+                <div class="input-wrapper">
+                    <input type="text" maxlength="1" class="guess-input" data-index="0">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" maxlength="1" class="guess-input" data-index="1">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" maxlength="1" class="guess-input" data-index="2">
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" maxlength="1" class="guess-input" data-index="3">
+                </div>
+            </div>
+            <p id="message"></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
